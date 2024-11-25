@@ -27,12 +27,14 @@ h1 {
     font-size: 2.5rem;
     color: #2c3e50;
     margin-bottom: 10px;
+    text-align: center;
 }
 
 h4 {
     font-size: 1.25rem;
     color: #7f8c8d;
     margin-bottom: 20px;
+    text-align: center;
 }
 
 section {
@@ -43,12 +45,14 @@ h2 {
     font-size: 1.8rem;
     color: #34495e;
     margin-bottom: 15px;
+    text-align: center;
 }
 
 p {
     font-size: 1rem;
     color: #555;
     line-height: 1.8;
+    text-align: center;
 }
 
 
@@ -62,16 +66,19 @@ button {
     cursor: pointer;
     transition: background-color 0.3s ease;
     text-align: center;
+    
 }
 
 button a {
     color: white;
     text-decoration: none;
     display: block;
+    
 }
 
 button:hover {
     background-color: #8429b9;
+    
 }
 
 
