@@ -1,3 +1,13 @@
 # WITS
 
-O site foi feito usando HTML, CSS e JavaScript. Ele consiste num site bem simples, com design fácil de entender. O JavaScript conta com diversas funções, umas um pouco mais complexas que outras, como por exemplo a "new Date().getFullYear()" que envolve a interação do site com a data atual fornecida pela máquina do usuário. Fora isso, o JavaScript tem funções básicas de remoção e adição de informações num array JSON, em localStorage, onde elas poderão ser recuperadas futuramente.
+O site foi feito usando HTML, CSS e JavaScript. Ele consiste num site bem simples, com design fácil de entender. 
+
+Este código JavaScript implementa um sistema interativo de perguntas e respostas, utilizando o `localStorage` para armazenar e recuperar dados entre recarregamentos da página. Quando a página é carregada, o código se assegura de que os elementos do DOM estejam prontos para serem manipulados com o evento `DOMContentLoaded`. Ele cria uma interface onde o usuário pode enviar perguntas, visualizar as perguntas já feitas, respondê-las após um ano e até excluí-las.
+
+A função principal que gerencia o envio de perguntas é `salvarPergunta()`. Quando o usuário digita uma pergunta e clica no botão de envio (`btnEnviarPergunta`), a pergunta é salva no `localStorage`, junto com o ano em que foi feita. O campo de entrada é limpo e a lista de perguntas exibida na tela é atualizada automaticamente. A função `exibirPerguntas()` é responsável por carregar as perguntas salvas e exibi-las no HTML. Para cada pergunta, o código verifica se já passou um ano desde o envio e, se sim, permite que o usuário insira uma resposta. Caso contrário, ele exibe uma mensagem informando que o usuário precisa esperar um ano para responder.
+
+A exibição de perguntas inclui a data em que a pergunta foi feita e o tempo decorrido desde então. Se a pergunta ainda não foi respondida e já passou um ano, é exibido um campo de resposta (`textarea`) junto com um botão para salvar a resposta. Se a pergunta já foi respondida, a resposta é exibida. Caso contrário, o código informa que o usuário precisa esperar para responder.
+
+Além disso, o código permite excluir perguntas. Cada pergunta exibida possui um botão de exclusão, que, quando clicado, remove a pergunta do `localStorage` e atualiza a lista na tela. Ao responder uma pergunta, a resposta é salva e o estado da pergunta é alterado para "respondido". A atualização é feita chamando a função `exibirPerguntas()` novamente, garantindo que a interface reflita as mudanças.
+
+No final, o código garante que todas as perguntas e respostas sejam carregadas ao iniciar a página, com o código chamando `exibirPerguntas()` logo após o carregamento da página. Essa abordagem cria uma aplicação simples e eficaz, permitindo ao usuário interagir com perguntas enviadas, responder a elas após um ano e excluir aquelas que não deseja manter, tudo isso de maneira persistente no navegador usando o `localStorage`.
